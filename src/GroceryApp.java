@@ -12,7 +12,8 @@ public class GroceryApp {
         double itemPrice01, itemPrice02;
         int itemQuantity01, itemQuantity02;
         double itemCost01, itemCost02, totalAmount;
-        int randomNumber = 1 + rand.nextInt(10);
+        itemQuantity01= 1 + rand.nextInt(10);
+        itemQuantity02= 1 + rand.nextInt(10);
 
         System.out.println("Enter name of item 1 ");
         itemName01 = keyboard.next();
@@ -26,20 +27,22 @@ public class GroceryApp {
         System.out.println("Enter price of item 2 ");
         itemPrice02 = keyboard.nextDouble();
 
-        System.out.println("Enter Quantity of item 1 ");
-        itemQuantity01 = keyboard.nextInt();
+       //System.out.println("Enter Quantity of item 1 ");
+        // itemQuantity01 = keyboard.nextInt();
 
-        System.out.println("Enter Quantity of item 2 ");
-        itemQuantity02 = keyboard.nextInt();
+        //System.out.println("Enter Quantity of item 2 ");
+        //itemQuantity02 = keyboard.nextInt();
 
         itemCost01 = itemPrice01*itemQuantity01;
         itemCost02 = itemPrice02*itemQuantity02;
         totalAmount = itemCost01 + itemCost02;
 
+        System.out.println("\n");
+
         System.out.println("Item Name" + "\t" + "Price" + "\t" + "Quantity" + "\t" + "Cost" + "\n"
-                                + itemName01 + "\t\t" + "$"+ itemPrice01 + "\t" + itemQuantity01 + "\t\t\t" + "$" + itemCost01 + "\n"
-                                + itemName02 + "\t\t" + "$" + itemPrice02 + "\t\t" + itemQuantity02 + "\t\t\t" + "$" + itemCost02 + "\n\n"
-                                + "Total Purchase Amount = " + "$" + totalAmount + "(" + randomNumber + ")" + "\n\n"
+                                + itemName01 + "\t\t" + "$"+ itemPrice01 + "\t" + itemQuantity01 + "\t\t" + "$" + itemCost01 + "\n"
+                                + itemName02 + "\t\t" + "$" + itemPrice02 + "\t" + itemQuantity02 + "\t\t" + "$" + itemCost02 + "\n\n"
+                                + "Total Purchase Amount = " + "$" + totalAmount + "\n\n"
                 );
 
         if (totalAmount <=20){
